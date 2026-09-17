@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://caxbefy4m0uc8"]
+[gd_scene format=3 uid="uid://caxbefy4m0uc8"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_7dm0k"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -13,29 +13,33 @@ sky = SubResource("Sky_ig7tw")
 tonemap_mode = 2
 glow_enabled = true
 
-[node name="Main" type="Node3D"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xrhlg"]
+albedo_color = Color(0.33660772, 0.33660758, 0.3366076, 1)
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+[node name="Main" type="Node3D" unique_id=235833161]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=934427324]
 environment = SubResource("Environment_0xm2m")
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1188127251]
 transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 17.657955, 0)
 shadow_enabled = true
 
-[node name="CSGBox3D" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6000001, 0, 0)
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=394141917]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5859363, -4.7683716e-07, 0.0017318726)
 use_collision = true
 size = Vector3(100, 1, 100)
+material = SubResource("StandardMaterial3D_xrhlg")
 
-[node name="CSGBox3D2" type="CSGBox3D" parent="."]
+[node name="CSGBox3D2" type="CSGBox3D" parent="." unique_id=363866060]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.35, 1.5, 0)
 use_collision = true
 size = Vector3(6.3, 2, 1)
 
-[node name="CSGBox3D3" type="CSGBox3D" parent="."]
+[node name="CSGBox3D3" type="CSGBox3D" parent="." unique_id=1827743869]
 transform = Transform3D(-4.4703484e-08, 0, -1, 0, 1, 0, 1, 0, -4.4703484e-08, 6, 1.5525388, -0.20000005)
 use_collision = true
 size = Vector3(6.3, 2, 1)
 
-[node name="Camera3D" type="Camera3D" parent="."]
+[node name="Camera3D" type="Camera3D" parent="." unique_id=26263409]
 transform = Transform3D(-0.9396926, 0, -0.3420202, 0, 1, 0, 0.3420202, 0, -0.9396926, -2.0141582, 8.10828, -15.355164)

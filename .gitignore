@@ -1,0 +1,8 @@
+# OS junk
+.DS_Store
+._*
+Thumbs.db
+
+# Blender auto-backup files (rewritten every save, pure churn - not real backups)
+*.blend1
+*.blend2

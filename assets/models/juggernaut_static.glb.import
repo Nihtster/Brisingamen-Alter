@@ -4,11 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dbkj4ud5a5ph6"
-valid=false
+path="res://.godot/imported/juggernaut_static.glb-67d5e25cd27e92f8e88b9e3a309f1bf9.scn"
 
 [deps]
 
 source_file="res://assets/models/juggernaut_static.glb"
+dest_files=["res://.godot/imported/juggernaut_static.glb-67d5e25cd27e92f8e88b9e3a309f1bf9.scn"]
 
 [params]
 

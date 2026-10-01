@@ -16,7 +16,7 @@ glow_enabled = true
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xrhlg"]
 albedo_color = Color(0.33660772, 0.33660758, 0.3366076, 1)
 
-[node name="Main" type="Node3D" unique_id=235833161]
+[node name="World" type="Node3D" unique_id=235833161]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=934427324]
 environment = SubResource("Environment_0xm2m")

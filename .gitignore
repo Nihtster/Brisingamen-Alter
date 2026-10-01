@@ -6,3 +6,7 @@ Thumbs.db
 # Blender auto-backup files (rewritten every save, pure churn - not real backups)
 *.blend1
 *.blend2
+
+# Godot 4+ specific ignores
+.godot/
+/android/

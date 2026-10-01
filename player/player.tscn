@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://bqdtn3fmrg5sh"]
+
+[ext_resource type="PackedScene" uid="uid://dbkj4ud5a5ph6" path="res://assets/models/juggernaut_static.glb" id="1_oul6g"]
+[ext_resource type="Script" uid="uid://bqxx5khsk2ryq" path="res://player/player.gd" id="1_rkbax"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hnfto"]
+size = Vector3(10.985718, 6, 11.458282)
+
+[node name="Player" type="CharacterBody3D" unique_id=2053431813]
+script = ExtResource("1_rkbax")
+
+[node name="Pivot" type="Node3D" parent="." unique_id=481656068]
+
+[node name="juggernaut_static" parent="." unique_id=1007613726 instance=ExtResource("1_oul6g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7839303, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=6319946]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+shape = SubResource("BoxShape3D_hnfto")

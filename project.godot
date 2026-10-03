@@ -59,3 +59,4 @@ jump={
 [physics]
 
 3d/physics_engine="Jolt Physics"
+common/physics_interpolation=true

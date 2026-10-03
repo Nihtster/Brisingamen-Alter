@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://dbkj4ud5a5ph6" path="res://assets/models/juggernaut_static.glb" id="1_oul6g"]
 [ext_resource type="Script" uid="uid://bqxx5khsk2ryq" path="res://player/player.gd" id="1_rkbax"]
+[ext_resource type="Script" uid="uid://ctxu060pwakdc" path="res://player/camera_rig.gd" id="3_g1dw6"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_hnfto"]
 size = Vector3(10.985718, 6, 11.458282)
@@ -11,9 +12,20 @@ script = ExtResource("1_rkbax")
 
 [node name="Pivot" type="Node3D" parent="." unique_id=481656068]
 
-[node name="juggernaut_static" parent="." unique_id=1007613726 instance=ExtResource("1_oul6g")]
+[node name="juggernaut_static" parent="Pivot" unique_id=1007613726 instance=ExtResource("1_oul6g")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, 1.7839303, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=6319946]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
 shape = SubResource("BoxShape3D_hnfto")
+
+[node name="SpringArm3D" type="SpringArm3D" parent="." unique_id=492362670]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7, 0)
+spring_length = 10.0
+script = ExtResource("3_g1dw6")
+cam_pitch_min = -0.1
+cam_pitch_max = 0.2
+
+[node name="Camera3D" type="Camera3D" parent="SpringArm3D" unique_id=494809206]
+transform = Transform3D(1, 0, 0, 0, 0.9453906, 0.3259396, 0, -0.32593957, 0.94539064, 0, 3.8965268, 0)
+fov = 80.0
